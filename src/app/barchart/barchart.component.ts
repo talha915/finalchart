@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
-import { BarchartComponent } from '../app/barchart/barchart.component';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-barchart',
+  templateUrl: './barchart.component.html',
+  styleUrls: ['./barchart.component.css']
 })
-export class AppComponent {
+export class BarchartComponent implements OnInit {
+  
+  ngOnInit() {
+  }
+
   options: Object;
   constructor() {
     this.options = {
       chart: {
-        type: 'line'
+        type: 'bar'
       },
       title: {
-        text: 'Line Chart'
+        text: 'Bar Chart'
       },
       subtitle: {
         text: ''
@@ -50,4 +54,6 @@ export class AppComponent {
       ],
     };
   }
+  
+
 }

@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
-import { BarchartComponent } from '../app/barchart/barchart.component';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-splinechart',
+  templateUrl: './splinechart.component.html',
+  styleUrls: ['./splinechart.component.css']
 })
-export class AppComponent {
+export class SplinechartComponent implements OnInit {
+
+  ngOnInit() {
+  }
+
   options: Object;
   constructor() {
     this.options = {
       chart: {
-        type: 'line'
+        type: 'pie'
       },
       title: {
-        text: 'Line Chart'
+        text: 'Pie Chart'
       },
       subtitle: {
         text: ''
@@ -50,4 +54,5 @@ export class AppComponent {
       ],
     };
   }
+
 }
